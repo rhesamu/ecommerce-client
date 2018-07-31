@@ -2,7 +2,9 @@
   <div class="home">
     <img src="../assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <HomeComponent /> 
+    <div class="title">
+      <h1>{{ msg }}</h1>
+    </div>
   </div>
 </template>
 
@@ -13,9 +15,10 @@ import HomeComponent from '@/components/HomeComponent.vue'
 
 export default {
   name: 'home',
-  components: {
-    // HelloWorld
-    HomeComponent
+  data() {
+    return {
+      msg: 'Welcome to Cart page'
+    }
   }
 }
 </script>
