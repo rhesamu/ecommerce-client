@@ -14,8 +14,8 @@ import {
   // ALL_MANUFACTURERS_SUCCESS
 } from './mutation-types'
 
-const API_BASE = 'http://localhost:3000/api'
-// const API_BASE = 'http://ecommerce-api.rhesautomo.com/api'
+// const API_BASE = 'http://localhost:3000/api'
+const API_BASE = 'http://ecommerce-api.rhesautomo.com/api'
 
 export const productActions = {
   allProducts ({commit}) {
