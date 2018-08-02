@@ -13,6 +13,7 @@
     methods: {
       addProduct (model) {
         console.log('model -->', model)
+        this.$store.dispatch('addProduct', model)
       }
     },
     components: {

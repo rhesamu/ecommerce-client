@@ -1,24 +1,25 @@
 <template>
-  <div class="home">
-    <img src="../assets/logo.png">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <div v-if="cart.length > 0">
     <div class="title">
-      <h1>{{ msg }}</h1>
+      <h1><i class="fa fa-superpowers"></i> Your Cart</h1>
     </div>
+    <template v-for="product in cart">
+      <product-details :product="product" :key="product.id"></product-details>
+    </template>
   </div>
+  <div v-else class="title"><h1><i class="fa fa-superpowers"></i> Your Cart is Empty</h1></div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-import HomeComponent from '@/components/HomeComponent.vue'
-
-export default {
-  name: 'home',
-  data() {
-    return {
-      msg: 'Welcome to Cart page'
+  import ProductDetails from '../components/products/ProductDetails'
+  export default {
+    data () {
+      return {
+        cart: this.$store.state.cart
+      }
+    },
+    components: {
+      productDetails: ProductDetails
     }
   }
-}
 </script>

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { ADD_TO_CART, REMOVE_FROM_CART } from '../../store/mutation-types'
+import { ADD_TO_CART } from '../../store/mutation-types'
 
 export default {
   props: ['product'],
